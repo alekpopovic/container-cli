@@ -1,0 +1,666 @@
+{
+  "schema_version": 1,
+  "product": "DockJump",
+  "pack_version": "1.0.0",
+  "created_at": "2026-09-28",
+  "prompts": [
+    {
+      "id": "001",
+      "title": "Repository audit and CLI contract",
+      "phase": "01 CLI foundation",
+      "reasoning": "high",
+      "depends_on": [],
+      "file": "prompts/001-repository-audit-and-cli-contract.md",
+      "sha256": "498e417f4e067e4f849fc8242a05308e27b0b001acdb742c8f980bf1e1893f26"
+    },
+    {
+      "id": "002",
+      "title": "Go module and Cobra root command",
+      "phase": "01 CLI foundation",
+      "reasoning": "medium",
+      "depends_on": [
+        "001"
+      ],
+      "file": "prompts/002-go-module-and-cobra-root-command.md",
+      "sha256": "b2c36901cb7b444c6889b9ace2636bf2abe049268276675966e9d589e4542755"
+    },
+    {
+      "id": "003",
+      "title": "Command tree and argument validation",
+      "phase": "01 CLI foundation",
+      "reasoning": "medium",
+      "depends_on": [
+        "002"
+      ],
+      "file": "prompts/003-command-tree-and-argument-validation.md",
+      "sha256": "4a296515addd3ea375a0348d0b813ea3c432441596ef983d8e319eb8ea1e6165"
+    },
+    {
+      "id": "004",
+      "title": "Typed results errors and output contract",
+      "phase": "01 CLI foundation",
+      "reasoning": "high",
+      "depends_on": [
+        "003"
+      ],
+      "file": "prompts/004-typed-results-errors-and-output-contract.md",
+      "sha256": "226a0fed89fdd61a92f0b9f1f8febad4c5b52d8466264b203a52e68f7df2c0bf"
+    },
+    {
+      "id": "005",
+      "title": "Configuration profiles and precedence",
+      "phase": "01 CLI foundation",
+      "reasoning": "high",
+      "depends_on": [
+        "004"
+      ],
+      "file": "prompts/005-configuration-profiles-and-precedence.md",
+      "sha256": "cec82b96b8a016094dae3661ac8e0d8505481e70f91e58dcd4e378bc215c9de2"
+    },
+    {
+      "id": "006",
+      "title": "Policy enforcement and confirmation input",
+      "phase": "01 CLI foundation",
+      "reasoning": "high",
+      "depends_on": [
+        "005"
+      ],
+      "file": "prompts/006-policy-enforcement-and-confirmation-input.md",
+      "sha256": "d7369518478bdad92114a63eac23fcee4b2450d7abfe6f18804d420b80067249"
+    },
+    {
+      "id": "007",
+      "title": "Execution interfaces and synthetic fixtures",
+      "phase": "01 CLI foundation",
+      "reasoning": "medium",
+      "depends_on": [
+        "006"
+      ],
+      "file": "prompts/007-execution-interfaces-and-synthetic-fixtures.md",
+      "sha256": "68b0c6d4de55c08422ded66ef37401b870b6913037f1aa50d467107581738fa3"
+    },
+    {
+      "id": "008",
+      "title": "Local doctor and deterministic startup",
+      "phase": "01 CLI foundation",
+      "reasoning": "medium",
+      "depends_on": [
+        "007"
+      ],
+      "file": "prompts/008-local-doctor-and-deterministic-startup.md",
+      "sha256": "3fa07270fd4911e5f828d70f6f9d6a16b27bdb97796dcb8eede0cf26b72d7ad5"
+    },
+    {
+      "id": "009",
+      "title": "SSH config candidate discovery",
+      "phase": "02 Native SSH",
+      "reasoning": "high",
+      "depends_on": [
+        "008"
+      ],
+      "file": "prompts/009-ssh-config-candidate-discovery.md",
+      "sha256": "05e381d945a12ab8ea541e07e04b232d784870c6db210e151c3875982a0cd4b4"
+    },
+    {
+      "id": "010",
+      "title": "Effective SSH resolution and trust boundary",
+      "phase": "02 Native SSH",
+      "reasoning": "high",
+      "depends_on": [
+        "009"
+      ],
+      "file": "prompts/010-effective-ssh-resolution-and-trust-boundary.md",
+      "sha256": "a39b796eaf1bb93d1cc29310866fe3070aa777ee491075e388340a483a2997f9"
+    },
+    {
+      "id": "011",
+      "title": "Go OpenSSH process runner",
+      "phase": "02 Native SSH",
+      "reasoning": "high",
+      "depends_on": [
+        "010"
+      ],
+      "file": "prompts/011-go-openssh-process-runner.md",
+      "sha256": "62f25706bb5968ae59d5fad1e32b16b28116ae4fd95187426eea8664bc6cf371"
+    },
+    {
+      "id": "012",
+      "title": "Remote command validation and quoting",
+      "phase": "02 Native SSH",
+      "reasoning": "high",
+      "depends_on": [
+        "011"
+      ],
+      "file": "prompts/012-remote-command-validation-and-quoting.md",
+      "sha256": "e8c515fa146a53340cd9d38af7b111955a4195f403c5ca114aa476ea84a9ded1"
+    },
+    {
+      "id": "013",
+      "title": "Keys host verification and unattended jumps",
+      "phase": "02 Native SSH",
+      "reasoning": "high",
+      "depends_on": [
+        "012"
+      ],
+      "file": "prompts/013-keys-host-verification-and-unattended-jumps.md",
+      "sha256": "0666c7cab90f4ab89b8b3f457127c42797130900893bdc01e4b17a0b894d68b4"
+    },
+    {
+      "id": "014",
+      "title": "Invocation-scoped connection reuse",
+      "phase": "02 Native SSH",
+      "reasoning": "high",
+      "depends_on": [
+        "013"
+      ],
+      "file": "prompts/014-invocation-scoped-connection-reuse.md",
+      "sha256": "c8ef5ba47a11ed9d96ae82fb73729ccbc1526a43bac28d2c0f692f141280d4c9"
+    },
+    {
+      "id": "015",
+      "title": "Remote Docker capability and endpoint probe",
+      "phase": "02 Native SSH",
+      "reasoning": "high",
+      "depends_on": [
+        "014"
+      ],
+      "file": "prompts/015-remote-docker-capability-and-endpoint-probe.md",
+      "sha256": "df6efc75dd13e1542afc6c46537d57db7f367c7f76a171967403ff317fc6d602"
+    },
+    {
+      "id": "016",
+      "title": "Hosts profiles and checks",
+      "phase": "02 Native SSH",
+      "reasoning": "medium",
+      "depends_on": [
+        "015"
+      ],
+      "file": "prompts/016-hosts-profiles-and-checks.md",
+      "sha256": "fc603e46a979f5d38d50f233aafd1cfaa2ecfd6f9748ee3acc8cb26013135caa"
+    },
+    {
+      "id": "017",
+      "title": "Structured SSH error classification",
+      "phase": "02 Native SSH",
+      "reasoning": "high",
+      "depends_on": [
+        "016"
+      ],
+      "file": "prompts/017-structured-ssh-error-classification.md",
+      "sha256": "b1f848acdcbb7aab7eba56099123686ffbf9d7dc51c85e2b440aea9db822f755"
+    },
+    {
+      "id": "018",
+      "title": "Real SSH vertical slice checkpoint",
+      "phase": "02 Native SSH",
+      "reasoning": "high",
+      "depends_on": [
+        "017"
+      ],
+      "file": "prompts/018-real-ssh-vertical-slice-checkpoint.md",
+      "sha256": "c15acb237b452eb73a2d534f79dab17a0c468aa890e80bcd76a3c1bc5685b16e"
+    },
+    {
+      "id": "019",
+      "title": "Container inventory adapter",
+      "phase": "03 Read-only MVP",
+      "reasoning": "high",
+      "depends_on": [
+        "018"
+      ],
+      "file": "prompts/019-container-inventory-adapter.md",
+      "sha256": "bd49b550583b10f0770c9d59d525c4cee168b0e36aedbe4b43b1a150d75603d4"
+    },
+    {
+      "id": "020",
+      "title": "Container filtering and stable presentation",
+      "phase": "03 Read-only MVP",
+      "reasoning": "medium",
+      "depends_on": [
+        "019"
+      ],
+      "file": "prompts/020-container-filtering-and-stable-presentation.md",
+      "sha256": "24953d86d8b6accd229d6de09365a985b25eca3535277397470ac0379f4183ec"
+    },
+    {
+      "id": "021",
+      "title": "Container inspect and secret masking",
+      "phase": "03 Read-only MVP",
+      "reasoning": "high",
+      "depends_on": [
+        "020"
+      ],
+      "file": "prompts/021-container-inspect-and-secret-masking.md",
+      "sha256": "65a0826bdcf22539d004aa68f6233dc85ba24fe26f6d29220f9915743c7dd123"
+    },
+    {
+      "id": "022",
+      "title": "Focused container detail subcommands",
+      "phase": "03 Read-only MVP",
+      "reasoning": "medium",
+      "depends_on": [
+        "021"
+      ],
+      "file": "prompts/022-focused-container-detail-subcommands.md",
+      "sha256": "722fe5c47a3a52e650169efc90b0cf7e556036648ff7739243cc0464c1375403"
+    },
+    {
+      "id": "023",
+      "title": "Bounded log snapshots",
+      "phase": "03 Read-only MVP",
+      "reasoning": "high",
+      "depends_on": [
+        "022"
+      ],
+      "file": "prompts/023-bounded-log-snapshots.md",
+      "sha256": "94b10a60ae30183ea48f138e0131760ec6751d4f8ed0edadd05773399f8d6906"
+    },
+    {
+      "id": "024",
+      "title": "Log follow backpressure and cancellation",
+      "phase": "03 Read-only MVP",
+      "reasoning": "high",
+      "depends_on": [
+        "023"
+      ],
+      "file": "prompts/024-log-follow-backpressure-and-cancellation.md",
+      "sha256": "8741c0c5469ff151c87939d7cc5704471f22ad079b1f23431d059d0b39320672"
+    },
+    {
+      "id": "025",
+      "title": "Container statistics snapshots",
+      "phase": "03 Read-only MVP",
+      "reasoning": "high",
+      "depends_on": [
+        "024"
+      ],
+      "file": "prompts/025-container-statistics-snapshots.md",
+      "sha256": "735711ac1a486e49cbef21a002d16584c25e59d7b3d8294a86694dfe763fdcfc"
+    },
+    {
+      "id": "026",
+      "title": "Watch mode for inventory and statistics",
+      "phase": "03 Read-only MVP",
+      "reasoning": "high",
+      "depends_on": [
+        "025"
+      ],
+      "file": "prompts/026-watch-mode-for-inventory-and-statistics.md",
+      "sha256": "f035abc3fbf91604c6b4d30698e5c9c00f7fb44edb2f74b18f60d58ba303e5d6"
+    },
+    {
+      "id": "027",
+      "title": "Docker events command",
+      "phase": "03 Read-only MVP",
+      "reasoning": "high",
+      "depends_on": [
+        "026"
+      ],
+      "file": "prompts/027-docker-events-command.md",
+      "sha256": "98e3806d1e727879345f5757e59ab72fb8c0ec14804ed08e733123acf29c158c"
+    },
+    {
+      "id": "028",
+      "title": "Read retries timeout and cancellation policy",
+      "phase": "03 Read-only MVP",
+      "reasoning": "high",
+      "depends_on": [
+        "027"
+      ],
+      "file": "prompts/028-read-retries-timeout-and-cancellation-policy.md",
+      "sha256": "232f755a081330cae372cb7bcca59cb33cecf45c6d9feb95855664702ae4aa1f"
+    },
+    {
+      "id": "029",
+      "title": "Compose discovery and service grouping",
+      "phase": "03 Read-only MVP",
+      "reasoning": "high",
+      "depends_on": [
+        "028"
+      ],
+      "file": "prompts/029-compose-discovery-and-service-grouping.md",
+      "sha256": "2136baaf386f682a98b7a891912de340663d74d017598a72cc383369a86e256b"
+    },
+    {
+      "id": "030",
+      "title": "Read-only CLI MVP checkpoint",
+      "phase": "03 Read-only MVP",
+      "reasoning": "high",
+      "depends_on": [
+        "029"
+      ],
+      "file": "prompts/030-read-only-cli-mvp-checkpoint.md",
+      "sha256": "85f37b8ed10bf64f4fc1376e94fb77ba999754a3468824c382dad4cd6ca6c3dc"
+    },
+    {
+      "id": "031",
+      "title": "Mutation planning dry-run and activity records",
+      "phase": "04 Management",
+      "reasoning": "high",
+      "depends_on": [
+        "030"
+      ],
+      "file": "prompts/031-mutation-planning-dry-run-and-activity-records.md",
+      "sha256": "e87f80bdb1bc3c53ef5816dd46493a2247e523f11135fa830ebcb90ee8d9ab8a"
+    },
+    {
+      "id": "032",
+      "title": "Container start stop and restart commands",
+      "phase": "04 Management",
+      "reasoning": "high",
+      "depends_on": [
+        "031"
+      ],
+      "file": "prompts/032-container-start-stop-and-restart-commands.md",
+      "sha256": "eeb3ece010bd9ce77d4fcfa94e35a345324a697d2480f21f8ff5df28a3e5df62"
+    },
+    {
+      "id": "033",
+      "title": "Batch outcomes and stopped-container removal",
+      "phase": "04 Management",
+      "reasoning": "high",
+      "depends_on": [
+        "032"
+      ],
+      "file": "prompts/033-batch-outcomes-and-stopped-container-removal.md",
+      "sha256": "4f6f179bc9cbef400099e489525d368bf2f14ad370078a3e69e40cee2cfddafe"
+    },
+    {
+      "id": "034",
+      "title": "Image inventory and inspection commands",
+      "phase": "04 Management",
+      "reasoning": "medium",
+      "depends_on": [
+        "033"
+      ],
+      "file": "prompts/034-image-inventory-and-inspection-commands.md",
+      "sha256": "c7269b3e9d36e982abf07fbadf22c68c344fc6d6499f924de06980126d8b0705"
+    },
+    {
+      "id": "035",
+      "title": "Volume inventory and references",
+      "phase": "04 Management",
+      "reasoning": "medium",
+      "depends_on": [
+        "034"
+      ],
+      "file": "prompts/035-volume-inventory-and-references.md",
+      "sha256": "0a0b1422e42f37730a0a0e7f890a518271dbc313ec677b942a1abcf957143043"
+    },
+    {
+      "id": "036",
+      "title": "Network inventory and attachments",
+      "phase": "04 Management",
+      "reasoning": "medium",
+      "depends_on": [
+        "035"
+      ],
+      "file": "prompts/036-network-inventory-and-attachments.md",
+      "sha256": "3746026b4361c90e369dbfaa602f7d3cfad1a25da87b98e7dff04c38c6baeae9"
+    },
+    {
+      "id": "037",
+      "title": "Verified Compose project lifecycle actions",
+      "phase": "04 Management",
+      "reasoning": "high",
+      "depends_on": [
+        "036"
+      ],
+      "file": "prompts/037-verified-compose-project-lifecycle-actions.md",
+      "sha256": "6942669058b49b23633db8a37def9612692bdde293a9d689a5fcc22b1048dcb1"
+    },
+    {
+      "id": "038",
+      "title": "Management CLI MVP checkpoint",
+      "phase": "04 Management",
+      "reasoning": "high",
+      "depends_on": [
+        "037"
+      ],
+      "file": "prompts/038-management-cli-mvp-checkpoint.md",
+      "sha256": "8e602b60b383fadc7c2a62f623e3edff40d45488683c3838c4c73d4b8357ce09"
+    },
+    {
+      "id": "039",
+      "title": "Noninteractive container exec passthrough",
+      "phase": "05 Exec and automation",
+      "reasoning": "high",
+      "depends_on": [
+        "038"
+      ],
+      "file": "prompts/039-noninteractive-container-exec-passthrough.md",
+      "sha256": "5a05c995111b7124e8baed7b956c964282863dd8216f88f95c99b5800d672aca"
+    },
+    {
+      "id": "040",
+      "title": "Interactive exec with native terminal behavior",
+      "phase": "05 Exec and automation",
+      "reasoning": "high",
+      "depends_on": [
+        "039"
+      ],
+      "file": "prompts/040-interactive-exec-with-native-terminal-behavior.md",
+      "sha256": "b42b08a48cbb41756292553be6aabbe3fbc47016ca209552641a4a78db396d7a"
+    },
+    {
+      "id": "041",
+      "title": "Signals process groups and broken pipes",
+      "phase": "05 Exec and automation",
+      "reasoning": "high",
+      "depends_on": [
+        "040"
+      ],
+      "file": "prompts/041-signals-process-groups-and-broken-pipes.md",
+      "sha256": "832932f3d709ab50e6b5bdc830f6066aea4182d2aec3d00c847ebee50697a96f"
+    },
+    {
+      "id": "042",
+      "title": "Read-only host groups and fleet snapshots",
+      "phase": "05 Exec and automation",
+      "reasoning": "high",
+      "depends_on": [
+        "041"
+      ],
+      "file": "prompts/042-read-only-host-groups-and-fleet-snapshots.md",
+      "sha256": "88dbeccd959bf15ab8a7eef9cff09ba965bd8851bb64df9d646c3c2e5cc1a9ff"
+    },
+    {
+      "id": "043",
+      "title": "Shell completion and generated reference docs",
+      "phase": "05 Exec and automation",
+      "reasoning": "medium",
+      "depends_on": [
+        "042"
+      ],
+      "file": "prompts/043-shell-completion-and-generated-reference-docs.md",
+      "sha256": "414132fd6485ee06af2fc7f5a8b7a479f6572663156aa0809a17679d4f4b0ba8"
+    },
+    {
+      "id": "044",
+      "title": "Configuration portability and diagnostics export",
+      "phase": "05 Exec and automation",
+      "reasoning": "medium",
+      "depends_on": [
+        "043"
+      ],
+      "file": "prompts/044-configuration-portability-and-diagnostics-export.md",
+      "sha256": "d5194901968c85d43e68ffaf4500207fe6f209fe05a90149721377a8b3c0d7b8"
+    },
+    {
+      "id": "045",
+      "title": "Performance bounds and streaming stress",
+      "phase": "05 Exec and automation",
+      "reasoning": "high",
+      "depends_on": [
+        "044"
+      ],
+      "file": "prompts/045-performance-bounds-and-streaming-stress.md",
+      "sha256": "c156a0a710170b57facaaa26c495a64120bff1d7e58bc8ecc3cd7f2365eb65fa"
+    },
+    {
+      "id": "046",
+      "title": "Feature-complete CLI checkpoint",
+      "phase": "05 Exec and automation",
+      "reasoning": "high",
+      "depends_on": [
+        "045"
+      ],
+      "file": "prompts/046-feature-complete-cli-checkpoint.md",
+      "sha256": "fd16a67e8c3cef8e52d4be717221bdfdb6ce1b27e7243b94fed87dd732827cae"
+    },
+    {
+      "id": "047",
+      "title": "Focused transport and CLI security review",
+      "phase": "06 Quality and delivery",
+      "reasoning": "high",
+      "depends_on": [
+        "046"
+      ],
+      "file": "prompts/047-focused-transport-and-cli-security-review.md",
+      "sha256": "c7e68c94d0d10c0f35ac967af517fbe7ff76a43a8e5395dd3d09df201156541b"
+    },
+    {
+      "id": "048",
+      "title": "Command contract and regression suite",
+      "phase": "06 Quality and delivery",
+      "reasoning": "high",
+      "depends_on": [
+        "047"
+      ],
+      "file": "prompts/048-command-contract-and-regression-suite.md",
+      "sha256": "878b8ac65563e282c1f93242e2bb5964eb09dd88b3e6b697467c5ee352a2c124"
+    },
+    {
+      "id": "049",
+      "title": "Fuzzing parsers and argument encoding",
+      "phase": "06 Quality and delivery",
+      "reasoning": "high",
+      "depends_on": [
+        "048"
+      ],
+      "file": "prompts/049-fuzzing-parsers-and-argument-encoding.md",
+      "sha256": "ef3a781e8487e7496e44aa9cbf47c0e65fc9aa9be1ac7278cf82c4cdd6c61111"
+    },
+    {
+      "id": "050",
+      "title": "Disposable SSH and Docker integration lab",
+      "phase": "06 Quality and delivery",
+      "reasoning": "high",
+      "depends_on": [
+        "049"
+      ],
+      "file": "prompts/050-disposable-ssh-and-docker-integration-lab.md",
+      "sha256": "a2c391f8af65b14acf705958eb690b9d74bb0f09450c9f778fa19b1a5a6e152e"
+    },
+    {
+      "id": "051",
+      "title": "Local quality gate and dependency checks",
+      "phase": "06 Quality and delivery",
+      "reasoning": "medium",
+      "depends_on": [
+        "050"
+      ],
+      "file": "prompts/051-local-quality-gate-and-dependency-checks.md",
+      "sha256": "895885d9a32c8db227a64ea7f1632ff7c6f8cbd5b641b3eee63837eea16c7a8f"
+    },
+    {
+      "id": "052",
+      "title": "Linux and macOS CI matrix",
+      "phase": "06 Quality and delivery",
+      "reasoning": "high",
+      "depends_on": [
+        "051"
+      ],
+      "file": "prompts/052-linux-and-macos-ci-matrix.md",
+      "sha256": "37b351f9b29e8d35ed6d5cae1a46f2468a70b177181a9b9d3619b94926e227ed"
+    },
+    {
+      "id": "053",
+      "title": "GoReleaser and cross-platform binary archives",
+      "phase": "06 Quality and delivery",
+      "reasoning": "high",
+      "depends_on": [
+        "052"
+      ],
+      "file": "prompts/053-goreleaser-and-cross-platform-binary-archives.md",
+      "sha256": "0909aa0288ec1e36a68b808d5d474958c031ba256ee03bc9fff8c959c2d5239b"
+    },
+    {
+      "id": "054",
+      "title": "Linux native binary acceptance",
+      "phase": "06 Quality and delivery",
+      "reasoning": "high",
+      "depends_on": [
+        "053"
+      ],
+      "file": "prompts/054-linux-native-binary-acceptance.md",
+      "sha256": "acbd1e69319122d57767ecf87f34b34da531f6aa5a7e8ce1e127e22b5ab27bf8"
+    },
+    {
+      "id": "055",
+      "title": "macOS native binary acceptance",
+      "phase": "06 Quality and delivery",
+      "reasoning": "high",
+      "depends_on": [
+        "054"
+      ],
+      "file": "prompts/055-macos-native-binary-acceptance.md",
+      "sha256": "ddac100e451436961a7375504f7618aa4e765137fab295f1911b8bbb44d3917a"
+    },
+    {
+      "id": "056",
+      "title": "Installation distribution and optional signing",
+      "phase": "06 Quality and delivery",
+      "reasoning": "medium",
+      "depends_on": [
+        "055"
+      ],
+      "file": "prompts/056-installation-distribution-and-optional-signing.md",
+      "sha256": "342f17fca0f4c270a200aa345b904f1c8d46179a24d5df46418691dfda1445d8"
+    },
+    {
+      "id": "057",
+      "title": "Versioned schemas upgrade and compatibility policy",
+      "phase": "06 Quality and delivery",
+      "reasoning": "medium",
+      "depends_on": [
+        "056"
+      ],
+      "file": "prompts/057-versioned-schemas-upgrade-and-compatibility-policy.md",
+      "sha256": "3217040f3944255d8e9f2d20e855813d16f6b14495d946653b15f1a4dd1e22c2"
+    },
+    {
+      "id": "058",
+      "title": "Serbian quick start and English runbook",
+      "phase": "06 Quality and delivery",
+      "reasoning": "medium",
+      "depends_on": [
+        "057"
+      ],
+      "file": "prompts/058-serbian-quick-start-and-english-runbook.md",
+      "sha256": "ba918f0fc445a28bdcc917d42deba8e884e57aff33ba90a4f39f90a114cef8a6"
+    },
+    {
+      "id": "059",
+      "title": "Release candidate review and final defects",
+      "phase": "06 Quality and delivery",
+      "reasoning": "high",
+      "depends_on": [
+        "058"
+      ],
+      "file": "prompts/059-release-candidate-review-and-final-defects.md",
+      "sha256": "f0acaaf4a696d0cb7e396b0486dfeb14e02c401914146a51f5eaf67c3b3baa92"
+    },
+    {
+      "id": "060",
+      "title": "Final handover and CLI release gate",
+      "phase": "06 Quality and delivery",
+      "reasoning": "high",
+      "depends_on": [
+        "059"
+      ],
+      "file": "prompts/060-final-handover-and-cli-release-gate.md",
+      "sha256": "8b25c044f3ad4b163ec33929ea3a3c181356b9fc4ae75fc773d5c4b7a847f393"
+    }
+  ]
+}

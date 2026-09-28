@@ -1,0 +1,24 @@
+{
+  "schemaVersion": "v1",
+  "command": "containers.ls",
+  "host": "app-server",
+  "items": [
+    {
+      "host": "app-server",
+      "id": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "name": "api",
+      "state": "running",
+      "status": "Up 2 hours",
+      "image": "example/api:dev"
+    },
+    {
+      "host": "app-server",
+      "id": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+      "name": "worker",
+      "state": "exited",
+      "status": "Exited (0) 10 minutes ago",
+      "image": "example/worker:dev"
+    }
+  ],
+  "errors": []
+}
